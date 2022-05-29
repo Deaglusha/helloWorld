@@ -1,10 +1,21 @@
 package main.java;
 
+import java.time.LocalDate;
+
 public class HellWorld {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        System.out.println("This is our second commit");
+        HellWorld hellWorld = new HellWorld();
+        System.out.println("hellWorld.notToday(\"2012-11-25\") = " + hellWorld.notToday("2022-05-22"));
+    }
 
-        System.out.println("Test GitHub");
+    public boolean notToday(String date) {
+        /*if//Alternative
+          (!LocalDate.now().toString().equals(date)) {
+            return true;
+        } else {
+            return false;
+        }*/
+
+        return !date.equals(LocalDate.now().toString());
     }
 }
